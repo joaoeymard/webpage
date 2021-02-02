@@ -18,48 +18,77 @@
   <main class="font-monospace">
     <section class="container my-5">
 
-      <div class="card card-body p-5 pb-4">
+      <div class="card card-body p-5 pb-4 mb-5">
 
         <div class="row align-items-center justify-content-center">
+          <div class="offset-lg-1 d-flex d-lg-none col-10 col-sm-6 col-lg-4 mb-4">
+            <figure class="figure m-0">
+              <img v-bind:src="github_profile.avatar_url" alt="joaoeymard" class="figure-img img-fluid rounded-circle m-0">
+            </figure>
+          </div>
           <div class="col-12 col-lg-6">
             <h1>
-              <span class="fs-3 fw-normal">Eu sou joaoeymard,</span>
+              <span class="fs-3 fw-normal">Eu sou {{ github_profile.name }},</span>
               <span class="d-block fs-1">Front-end Developer</span>
             </h1>
 
             <div class="mt-5">
               <span>
-                <i class="bi bi-geo-alt-fill"></i> Barbalha - CE - Brasil
+                <i class="bi bi-geo-alt-fill"></i> {{ github_profile.location }}
               </span>
-              <p class="mt-2">
-                Exercitationem dignissimos labore beatae adipisci corporis, cupiditate explicabo, rem amet temporibus
-                reprehenderit esse
-                praesentium accusamus aliquam debitis!
-              </p>
+              <p class="mt-2">{{ github_profile.bio }}</p>
             </div>
           </div>
-          <div class="offset-lg-1 col-12 col-sm-6 col-lg-5">
+          <div class="offset-lg-1 d-none d-lg-flex col-sm-6 col-lg-4">
             <figure class="figure m-0">
-              <img src="/assets/joaoeymard.jpeg" alt="joaoeymard" class="figure-img img-fluid rounded-circle m-0">
+              <img v-bind:src="github_profile.avatar_url" alt="joaoeymard" class="figure-img img-fluid rounded-circle m-0">
             </figure>
           </div>
 
           <div class="col-12 mt-5">
             <div class="d-flex justify-content-between border-top pt-4">
-              <a href="" class="btn btn-default">
-                <img src="/assets/github.svg" alt="logo github" class="img-fluid" style="width: 24px; height: 24px">
-              </a>
-              <a href="" class="btn btn-default">
-                <img src="/assets/instagram.svg" alt="logo instagram" class="img-fluid"
-                  style="width: 24px; height: 24px">
-              </a>
-              <a href="" class="btn btn-default">
-                <img src="/assets/linkedin.svg" alt="logo linkedin" class="img-fluid" style="width: 24px; height: 24px">
-              </a>
-              <a href="" class="btn btn-default">
-                <img src="/assets/telegram.svg" alt="logo telegram" class="img-fluid" style="width: 24px; height: 24px">
+              <a v-for="link in links" v-bind:href="link.url" class="btn btn-default" target="_blank" v-bind:title="link.name">
+                <img v-bind:src="link.icon_url" v-bind:alt="'logo ' + link.name" class="img-fluid" style="width: 24px; height: 24px">
               </a>
             </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row g-3">
+
+        <div class="col-12">
+          <span class="fs-6">Meus projetos:</span>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card card-body text-center">
+  
+            <span class="fs-4 mb-3">meuip</span>
+            <p>Uma API em node para identificar o ip público de uma requisição.</p>
+  
+            <a href="" class="btn btn-primary">acessar</a>
+  
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card card-body text-center">
+  
+            <span class="fs-4 mb-3">exibi.me</span>
+            <p>Um simples catálogo online, que redireciona o pedido para o whatsapp da empresa.</p>
+  
+            <a href="" class="btn btn-primary">acessar</a>
+  
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card card-body text-center">
+  
+            <span class="fs-4 mb-3">estac</span>
+            <p>Sistema que facilita no controle do fluxo em estacionamentos.</p>
+  
+            <a href="" class="btn btn-primary">acessar</a>
+  
           </div>
         </div>
 
@@ -74,6 +103,39 @@
   <script src="/lib/vue.min.js"></script>
 
   <script src="/js/main.js"></script>
+
+  <script>
+
+    window.onload = async function () {
+
+      v.handle_github_profile('joaoeymard');
+
+      v.links = [
+        {
+          icon_url: '/assets/github.svg', 
+          name: 'Github',
+          url: 'https://github.com/joaoeymard'
+        },
+        {
+          icon_url: '/assets/instagram.svg', 
+          name: 'Instagram',
+          url: 'https://www.instagram.com/joaoeymard'
+        },
+        {
+          icon_url: '/assets/linkedin.svg', 
+          name: 'Linkedin',
+          url: 'https://www.linkedin.com/in/joaoeymard'
+        },
+        {
+          icon_url: '/assets/telegram.svg', 
+          name: 'Telegram',
+          url: 'https://t.me/joaoeymard'
+        },
+      ]
+
+    }
+
+  </script>
 
 </body>
 
