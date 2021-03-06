@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  front:
+    read_only: false
+    hostname: joaoeymard-nx
+    container_name: joaoeymard-nx
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    env_file:
+      - ./.env.front
+    volumes:
+      - ${NGINX_FILE:-./joaoeymard.dev.template}:/etc/default/joaoeymard.dev.template
+      - ${NGINX_PATH-./}:/project/
