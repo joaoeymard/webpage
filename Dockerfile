@@ -1,5 +1,12 @@
 FROM alpine:3.13.2
 
-RUN apk add gettext
+WORKDIR /build/
 
-ENTRYPOINT /bin/sh -c "( envsubst < /etc/default/joaoeymard.dev.template | tee /project/joaoeymard.dev.conf )"
+COPY --chown=1000:993 assets/ /build/assets/
+COPY --chown=1000:993 css/ /build/css/
+COPY --chown=1000:993 js/ /build/js/
+COPY --chown=1000:993 lib/ /build/lib/
+COPY --chown=1000:993 index.html /build/
+
+
+ENTRYPOINT cp -rf /build/* /project/

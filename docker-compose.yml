@@ -7,9 +7,19 @@ services:
     container_name: joaoeymard-nx
     build:
       context: ./
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.nginx
     env_file:
       - ./.env.front
     volumes:
       - ${NGINX_FILE:-./joaoeymard.dev.template}:/etc/default/joaoeymard.dev.template
       - ${NGINX_PATH-./}:/project/
+
+  webservice:
+    read_only: false
+    hostname: joaoeymard-ws
+    container_name: joaoeymard-ws
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ${BUILD_PATH-./build/}:/project/
