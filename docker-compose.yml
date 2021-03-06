@@ -23,3 +23,8 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ${BUILD_PATH-./build/}:/project/
+
+networks:
+  default:
+    external:
+      name: server
