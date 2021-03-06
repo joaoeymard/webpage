@@ -2,7 +2,7 @@ server {
   listen 443 ssl;
 
   server_name $NGINX_HOST;
-  root $ROOT_PATH
+  root $ROOT_PATH;
 
   # SSL
   ssl_certificate $NGINX_CRT;
