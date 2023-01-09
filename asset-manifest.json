@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3ef9585e.css",
+    "main.js": "/static/js/main.0352579b.js",
+    "static/js/787.7882563d.chunk.js": "/static/js/787.7882563d.chunk.js",
+    "static/media/UbuntuMono-Regular.ttf": "/static/media/UbuntuMono-Regular.9fa7d55c51063608f793.ttf",
+    "static/media/joaoeymard.jpeg": "/static/media/joaoeymard.105818f84e836bc6ed64.jpeg",
+    "static/media/link-whatsapp.jpg": "/static/media/link-whatsapp.376422c48bb5b2644895.jpg",
+    "static/media/securepass.jpeg": "/static/media/securepass.4adee0bbafd58854c026.jpeg",
+    "static/media/tocombrasil.jpeg": "/static/media/tocombrasil.6dc72b1197dbeb8f926b.jpeg",
+    "static/media/ocrimage.jpeg": "/static/media/ocrimage.4ed27abc9172fbed9ccb.jpeg",
+    "static/media/logo_eymard_full_dark.svg": "/static/media/logo_eymard_full_dark.d01fc6c499c912c831fc3cc0b8294a8a.svg",
+    "static/media/instagram.svg": "/static/media/instagram.7f707b5e7f1f841b59e5d439a74b3f1c.svg",
+    "static/media/whatsapp.svg": "/static/media/whatsapp.de9049a8035814aeac58c62b4ce1fef6.svg",
+    "index.html": "/index.html",
+    "static/media/mail-dot-ru.svg": "/static/media/mail-dot-ru.743168b9a06615f1d093694f45044f23.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.93d84bdf0aca00e66147e1e202115664.svg",
+    "static/media/menu.svg": "/static/media/menu.2ea9de038a674dd2474bb0376baf85f3.svg",
+    "main.3ef9585e.css.map": "/static/css/main.3ef9585e.css.map",
+    "main.0352579b.js.map": "/static/js/main.0352579b.js.map",
+    "787.7882563d.chunk.js.map": "/static/js/787.7882563d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ef9585e.css",
+    "static/js/main.0352579b.js"
+  ]
+}
